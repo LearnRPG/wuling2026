@@ -221,21 +221,6 @@ const App: React.FC = () => {
           </div>
         </div>
       </footer>
-
-      {/* Persistent CTA (Bottom bar) */}
-      <div className="fixed bottom-0 left-0 right-0 bg-slate-900/80 backdrop-blur-xl border-t border-white/10 p-4 z-50 md:hidden shadow-[0_-10px_30px_rgba(0,0,0,0.5)]">
-        <div className="flex items-center justify-between gap-4">
-          <div className="flex-1 text-left">
-            <div className="text-[10px] text-slate-500 font-black uppercase tracking-wider">距離決戰武嶺還有</div>
-            <div className="text-sm font-black text-blue-500">
-               {activeEvent.date.toLocaleDateString('zh-TW')}
-            </div>
-          </div>
-          <button className="bg-blue-600 px-6 py-2.5 rounded-xl font-black text-sm text-white shadow-lg shadow-blue-600/20 active:scale-95 transition-transform">
-            報名連結
-          </button>
-        </div>
-      </div>
     </div>
   );
 };
