@@ -6,8 +6,17 @@ import ClimbingCalculator from './components/ClimbingCalculator';
 import { EVENTS } from './constants';
 import { EventType } from './types';
 
+const HERO_IMAGES = [
+  'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2070&auto=format&fit=crop',
+  'https://backend.cyclingtime.com/assets/uploads/document/2022/08/11491/images/166048037928557_P7895342.jpeg',
+  'https://backend.cyclingtime.com/assets/uploads/document/2022/08/11491/images/fdc1a787cdcb0bfba14f5b86f3316649.jpeg',
+  'https://www.cycling-update.info/uploads/05_tour/01_taiwan-ride/20161116/C92T01_1.jpg',
+  'https://www.cycling-update.info/uploads/04_classroom/02_riding-skills/20190115/C105P02_2.jpg'
+];
+
 const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState<EventType>(EventType.TIS_CHUNG_YUE);
+  const [heroImage] = useState(() => HERO_IMAGES[Math.floor(Math.random() * HERO_IMAGES.length)]);
 
   const activeEvent = EVENTS.find(e => e.id === activeTab)!;
 
@@ -17,7 +26,7 @@ const App: React.FC = () => {
       <div className="relative h-[60vh] md:h-[70vh] flex flex-col items-center justify-center overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-[10s] hover:scale-110"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2070&auto=format&fit=crop')" }}
+          style={{ backgroundImage: `url('${heroImage}')` }}
         >
           <div className="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-900/40 to-[#0f172a]"></div>
         </div>
