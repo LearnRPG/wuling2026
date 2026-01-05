@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 import CountdownTimer from './components/CountdownTimer';
 import ElevationChart from './components/ElevationChart';
-import AIAssistant from './components/AIAssistant';
 import ClimbingCalculator from './components/ClimbingCalculator';
 import { EVENTS } from './constants';
 import { EventType } from './types';
@@ -127,8 +126,6 @@ const App: React.FC = () => {
 
           {/* Right Sidebar */}
           <div className="lg:col-span-4 space-y-8">
-            <AIAssistant />
-
              {/* Rose Gold Medal Focus (For Event 1) */}
              {activeTab === EventType.TIS_CHUNG_YUE && (
               <div className="glass-card rounded-2xl p-6 rose-gold-glow border-2 border-[#b76e79]/30 overflow-hidden relative group">
