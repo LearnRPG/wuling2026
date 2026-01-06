@@ -326,7 +326,7 @@ const ClimbingCalculator: React.FC = () => {
              <div>
                <p className="text-xs font-black text-blue-400 uppercase">物理動力預估模型說明</p>
                <p className="text-xs text-slate-400 leading-relaxed mt-1">
-                 本模型已根據您提供的分段上升與下降量優化。計算考量了高海拔空氣稀薄產生的風阻降低效果，以及含氧量下降導致的功率損失 (Altitude Correction)。
+                 本模型結合了動態空氣密度（海拔越高阻力越小）與高度功率補償（海拔越高有效輸出越低）。實際情況下，集團騎乘的風阻效益 (Drafting) 可進一步提升約 10-20% 的速度，請視個人情況調整 IF。
                </p>
              </div>
           </div>
